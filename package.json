@@ -1,0 +1,37 @@
+{
+  "name": "naamubackend",
+  "version": "1.0.0",
+  "description": "Backend Services for Project",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon start.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adityaacharya001/NaamuBackend.git"
+  },
+  "keywords": [
+    "NodeJS",
+    "ExpressJS",
+    "MongoDB",
+    "Mongoose"
+  ],
+  "author": "Aditya Acharya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adityaacharya001/NaamuBackend/issues"
+  },
+  "homepage": "https://github.com/adityaacharya001/NaamuBackend#readme",
+  "devDependencies": {
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
+    "morgan": "^1.9.1",
+    "nodemon": "^1.19.1"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.6.2"
+  }
+}
