@@ -30,7 +30,7 @@ APIs List
 4. GET-http://localhost:4000/users/+"department"
     to get list of users with given department
 
-5. GET-http://localhost:4000/users/+"userID"
+5. DELETE-http://localhost:4000/users/+"userID"
     to delete a certain user with userId
 
 6. POST-http://localhost:4000/forms
