@@ -6,7 +6,7 @@ const router = express.Router();
 
 router.get('/', (req, res, next)=>{
     Form.find()
-        .select('_id creator approver department case status')
+        .select('_id creator approver approverDepartment creatorDepartment case status')
         .exec()
         .then(docs=>{
             const response= {
@@ -16,7 +16,8 @@ router.get('/', (req, res, next)=>{
                         _id: doc._id,
                         creator: doc.creator,
                         approver: doc.approver,
-                        department: doc.department,
+                        creatorDepartment: doc.creatorDepartment,
+                        approverDepartment: doc.approverDepartment,
                         case: doc.case,
                         status: doc.status,
                         request: {
@@ -46,7 +47,8 @@ router.post('/', (req, res, next)=>{
         _id: new mongoose.Types.ObjectId(),
         creator: req.body.creator,
         approver: req.body.approver,
-        department: req.body.department,
+        creatorDepartment: req.body.creatorDepartment,
+        approverDepartment: req.body.approverDepartment,
         case: req.body.case,
         status: req.body.status
     })
@@ -60,7 +62,8 @@ router.post('/', (req, res, next)=>{
                 _id: result._id,
                 creator: result.creator,
                 approver: result.approver,
-                department: result.department,
+                creatorDepartment: result.creatorDepartment,
+                approverDepartment: result.approverDepartment,
                 case: result.case,
                 status: result.status,
                 request: {
@@ -82,7 +85,7 @@ router.post('/', (req, res, next)=>{
 router.get('/:formId', (req, res, next)=>{
     const formId = req.params.formId;
     Form.findById(formId)
-    .select('_id creator approver department case status')
+        .select('_id creator approver dapproverDepartment creatorDepartment case status')
     .exec()
     .then(doc=>{
         console.log("selected form", doc);
@@ -117,7 +120,6 @@ router.patch('/:formId', (req, res, next) => {
         console.log("form updated with formID "+ formId);
         res.status(200).json({
             message: "form updated with formID " + formId,
-            result: result,
             request: {
                 type: 'GET',
                 url: "http://localhost:4000/forms/"+formId

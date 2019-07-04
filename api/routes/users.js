@@ -66,8 +66,7 @@ router.delete('/:userId', (req, res, next)=>{
     .then(result=>{
         console.log("user removed with userId "+ userId);
         res.status(200).json({
-            message: "user removed successfully with userId "+ userId,
-            result: result
+            message: "user removed successfully with userId "+ userId
         })
     })
     .catch(error=>{

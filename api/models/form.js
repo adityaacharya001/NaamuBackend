@@ -4,7 +4,8 @@ const formSchema = mongoose.Schema({
     _id: mongoose.Schema.Types.ObjectId,
     creator: String,
     approver: String,
-    department: String,
+    creatorDepartment: String,
+    approverDepartment: String,
     case: String,
     status: String
 })
