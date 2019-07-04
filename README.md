@@ -37,7 +37,8 @@ APIs List
     Send-: {
         creator: '',
         approver: '',
-        department: '',
+        approverDepartment: '',
+        creatorDepartment: '',
         case: '',
         status: ''
     }
