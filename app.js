@@ -5,6 +5,7 @@ import bodyParser from 'body-parser';
 import signInRoutes from "./api/routes/signIn";
 import signUpRoutes from "./api/routes/signUp";
 import formsRoutes from "./api/routes/forms";
+import usersRoutes from './api/routes/users';
 
 
 const app = express();
@@ -43,6 +44,7 @@ app.use((req, res, next) => {
 app.use("/signUp", signUpRoutes);
 app.use("/signIn", signInRoutes);
 app.use("/forms", formsRoutes);
+app.use("/users", usersRoutes);
 
 
 

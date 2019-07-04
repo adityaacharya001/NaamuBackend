@@ -22,14 +22,17 @@ router.post('/', (req, res, next)=>{
     credential.save()
     .then(result=>{
         console.log(result);
+        res.status(200).json({
+            message: "crenditial posted successfully",
+            credential: credential
+        })
     }).catch(error=>{
         console.log(error);
+        res.status(500).json({
+            message: "credential could not be posted",
+            error: error
+        })
     });
-
-    res.status(200).json({
-        message: "Form posted successfully",
-        credential: credential
-    })
 })
 
 export default router;
