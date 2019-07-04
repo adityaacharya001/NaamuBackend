@@ -22,4 +22,38 @@ APIs List
     Send -: {
         username: "username",
         password: "password"
-    }      
+    }
+
+3. GET-http://localhost:4000/users
+    to get all the list of users with their departments
+
+4. GET-http://localhost:4000/users/+"department"
+    to get list of users with given department
+
+5. GET-http://localhost:4000/users/+"userID"
+    to delete a certain user with userId
+
+6. POST-http://localhost:4000/forms
+    Send-: {
+        creator: '',
+        approver: '',
+        department: '',
+        case: '',
+        status: ''
+    }
+
+7. GET-http://localhost:4000/forms/formID
+    to get details of any form
+
+8. GET-http://localhost:4000/forms/
+to get the list of all the forms.
+
+9. PATCH-http://localhost:4000/forms/formID
+   Send-:{
+       [
+           {"propName": "", "value": ""}
+       ]
+   }
+
+ 10. DELETE-http://localhost:4000/forms/formID 
+    to delete a form

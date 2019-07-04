@@ -40,9 +40,7 @@ router.get('/:department', (req, res, next)=>{
         const users = {
             usersCount: docs.length,
             users : docs.map(doc=>{
-                return{
-                    username: doc.username
-                }
+                return doc.username
             })
         }
         console.log("list of users is ", users);
