@@ -10,7 +10,7 @@ import usersRoutes from './api/routes/users';
 
 const app = express();
 
-mongoose.connect('mongodb+srv://aditya2012ece:' + process.env.MONGO_ATLAS_PW + '@mern-rxmjv.mongodb.net/test?retryWrites=true&w=majority', { useNewUrlParser: true }).then(() => {
+mongoose.connect('mongodb+srv://aditya2012ece:' + 'Aditya_005' + '@mern-rxmjv.mongodb.net/test?retryWrites=true&w=majority', { useNewUrlParser: true }).then(() => {
     console.log("MongoDB server connected !!!!!");
 }).catch((err) => {
     console.log("Error : " + err);
