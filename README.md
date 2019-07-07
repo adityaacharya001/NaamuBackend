@@ -2,11 +2,12 @@
 Backend services for log in and CRUD operations
 NodeJS, ExpressJS and MongoDB
 
-Make a file name nodemone.js and add this code
+Make a file name nodemon.json and add this code
 
 {
     "env": {
-        "MONGO_ATLAS_PW": "MongoDB Paasword"
+        "MONGO_ATLAS_PW": "Mongoo_password",
+        "MONGO_ATLAS_USERNAME": "Mongo_username"
     }
 }
 
@@ -58,3 +59,7 @@ to get the list of all the forms.
 
  10. DELETE-http://localhost:4000/forms/formID 
     to delete a form
+
+Hosted Api for backend services-: https://secure-depths-88479.herokuapp.com/forms
+
+Hosted API for socket-server-: https://stormy-crag-26876.herokuapp.com/
